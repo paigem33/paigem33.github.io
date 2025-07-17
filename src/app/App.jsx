@@ -24,6 +24,8 @@ import { SiTypescript, SiRecoil, SiReactquery } from "react-icons/si";
 import Asrc from '../assets/images/asrc.webp';
 import Agentelite from '../assets/images/agentelite.webp';
 import Maidenvoyage from '../assets/images/maidenvoyage.svg';
+import Learn from '../assets/images/learn.svg';
+import Usu from '../assets/images/usu.png';
 
 // import style
 import style from './App.module.css';
@@ -51,7 +53,7 @@ const skills = [
 		url: "https://camo.githubusercontent.com/7ee502068c9b87eb84df40ef974addabb7ad25ff9d53c19ee793555ecd7ea509/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5675652e6a732d3335343935453f7374796c653d666f722d7468652d6261646765266c6f676f3d767565646f746a73266c6f676f436f6c6f723d344643303844"
 	},
 	{
-		name: "SQ Logo",
+		name: "SQL Logo",
 		url: "https://camo.githubusercontent.com/4804cde16e9487428ea27793df49b0ada0166115301325bade5532ae7060ed04/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d7953514c2d3030354338343f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465"
 	},
 	{
@@ -62,7 +64,7 @@ const skills = [
 
 const projects = [
 	{
-		name: '.Net/Fullstack Developer',
+		name: '.Net/Fullstack Developer @ ASRC Federal',
 		location: "Remote",
 		alt: "ASRC Federal Logo",
 		image: Asrc,
@@ -73,10 +75,17 @@ const projects = [
 			"Followed industry-standard deprecation practices for legacy endpoints",
 			"Collaborated closely with QA to identify, track, and resolve defects",
 			"Adapted to evolving requirements while working in an Agile environment"
+		  ],
+		  badges: [
+			"https://camo.githubusercontent.com/f4c52b575a890c7e67c6541271fc5733506088d19c77ffde6bab3e18e7948536/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2e4e45542d3543324439313f7374796c653d666f722d7468652d6261646765266c6f676f3d2e6e6574266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/e12029f1d6292800c6a63b7c134a199d76f99552944e2000beef21abca451162/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f632532332d2532333233393132302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d637368617270266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/4804cde16e9487428ea27793df49b0ada0166115301325bade5532ae7060ed04/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d7953514c2d3030354338343f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465",
+			"https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white",
+			"https://img.shields.io/badge/SonarQube-black?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD"
 		  ]
 	},
 	{
-		name: 'Software Developer',
+		name: 'Software Developer @ Maiden Voyage Software',
 		location: "Logan, Utah",
 		alt: "Maiden Voyage Logo",
 		image: Maidenvoyage,
@@ -87,10 +96,18 @@ const projects = [
 			"Led onboarding and training for new team members to ensure smooth integration and knowledge transfer",
 			"Conducted thorough code reviews to uphold code quality, consistency, and best practices",
 			"Collaborated directly with clients to gather requirements and define project goals"
+		  ],
+		  badges: [
+			"https://camo.githubusercontent.com/839c2b7156d9a4e8f021ae6c539331e84ea18bf0fd0ee15835f0695a838b292e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c61726176656c2d4646324432303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c61726176656c266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/59f1bf1e0c03f98c620e6456751406b0c8dba1ac0590704d93303b45cfe536ab/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5048502d3737374242343f7374796c653d666f722d7468652d6261646765266c6f676f3d706870266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/7ee502068c9b87eb84df40ef974addabb7ad25ff9d53c19ee793555ecd7ea509/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5675652e6a732d3335343935453f7374796c653d666f722d7468652d6261646765266c6f676f3d767565646f746a73266c6f676f436f6c6f723d344643303844",
+			"https://camo.githubusercontent.com/4804cde16e9487428ea27793df49b0ada0166115301325bade5532ae7060ed04/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d7953514c2d3030354338343f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/95759dac505a57f5a260db91eca6f7a0c852a095cb271cc6d37c413081c5f799/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e645f4353532d3338423241433f7374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e642d637373266c6f676f436f6c6f723d7768697465",
+			"https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white"
 		  ]
 	},
 	{
-		name: 'Web Developer',
+		name: 'Web Developer @ Agent Elite',
 		location: "San Diego, California",
 		alt: "Agent Elite Logo",
 		image: Agentelite,
@@ -101,9 +118,36 @@ const projects = [
 			"Implemented a custom PTO request workflow within the company time clock system using WordPress and PHP",
 			"Supported the launch and configuration of new servers to ensure successful deployments",
 			"Collaborated with internal teams to deliver reliable and scalable WordPress solutions"
+		  ],
+		  badges: [
+			"https://camo.githubusercontent.com/839c2b7156d9a4e8f021ae6c539331e84ea18bf0fd0ee15835f0695a838b292e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c61726176656c2d4646324432303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c61726176656c266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/59f1bf1e0c03f98c620e6456751406b0c8dba1ac0590704d93303b45cfe536ab/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5048502d3737374242343f7374796c653d666f722d7468652d6261646765266c6f676f3d706870266c6f676f436f6c6f723d7768697465",
+			"https://camo.githubusercontent.com/4804cde16e9487428ea27793df49b0ada0166115301325bade5532ae7060ed04/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d7953514c2d3030354338343f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465",
+			"https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white",
+			"https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white",
+			"https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
 		  ]
 	}
 ]
+
+const education = [
+	{
+		name: 'Utah State University',
+		location: "Logan, Utah",
+		alt: "USU Logo",
+		image: Usu,
+		dates: "August 2021 - May 2024", 
+		degree: "Computer Science BS"
+	},
+	{
+		name: 'Learn Academy',
+		location: "San Diego, California",
+		alt: "Learn Logo",
+		image: Learn,
+		dates: "June 2019 - September 2019", 
+		degree: "Fullstack Development Certificate"
+	},
+];
 
 function App() {
 	const form = useRef();
@@ -154,7 +198,8 @@ function App() {
 				<ul className={style.menu}>
 					<li><a href="#Home">Home</a></li>
 					<li><a href="#About">About</a></li>
-					<li><a href="#Projects">Projects</a></li>
+					<li><a href="#Experience">Experience</a></li>
+					<li><a href="#Education">Education</a></li>
 					<li><a href="#Contact">Contact</a></li>
 				</ul>
 			}
@@ -222,8 +267,8 @@ function App() {
 				</div>
 			</div>
 
-			{/* Projects */}
-			<div id='Projects' className={style.projects}>
+			{/* Experience */}
+			<div id='Experience' className={style.projects}>
 				<div className={style.container}>
 					<h2 className={style.title}>Experience</h2>
 					<div className={style["projects-list"]}>
@@ -245,6 +290,13 @@ function App() {
 											})
 										}
 										</ul>
+										<div className={style["project-badges"]}>
+										{
+											project.badges.map((badge, index) => {
+												return <img src={badge} alt="Software badge" key={index}/>
+											})
+										}
+										</div>
 									</div>
 								</div>
 							})
@@ -253,6 +305,33 @@ function App() {
 					</div>
 				</div>
 			</div>
+
+			{/* Education */}
+			<div id='Education' className={style.education}>
+				<div className={style.container}>
+					<h2 className={style.title}>Education</h2>
+					<div className={style["education-list"]}>
+						{
+							education.map((education, index) => {
+								return <div key={`education-${index}`} className={style.education}>
+									<div className={style["education-image"]}>
+										<img src={education.image} alt={education.alt}/>
+									</div>
+									<div className={style["education-info"]}>
+										<h3>{education.name}</h3>
+										<p>{education.dates}</p>
+										<p>{education.location}</p>
+										<p>{education.degree}</p>
+									</div>
+								</div>
+							})
+						}
+
+					</div>
+				</div>
+			</div>
+
+			{/* do to: style education, make everything mobile friendly, add my resume, test email form, maybe add internships */}
 
 			{/* Contact */}
 			<div id='Contact' className={style.contact}>
