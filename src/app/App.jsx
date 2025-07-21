@@ -137,7 +137,15 @@ const education = [
 		alt: "USU Logo",
 		image: Usu,
 		dates: "August 2021 - May 2024", 
-		degree: "Computer Science BS"
+		degree: "Computer Science BS",
+		badges: [
+			"https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+			"https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white",
+			"https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white",
+			"https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white",
+			"https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
+			"https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D",
+		  ]
 	},
 	{
 		name: 'Learn Academy',
@@ -145,7 +153,15 @@ const education = [
 		alt: "Learn Logo",
 		image: Learn,
 		dates: "June 2019 - September 2019", 
-		degree: "Fullstack Development Certificate"
+		degree: "Fullstack Development Certificate",
+		badges: [
+			"https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
+			"https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white",
+			"https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
+			"https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB",
+			"https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white",
+			"https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"
+		  ]
 	},
 ];
 
@@ -313,15 +329,21 @@ function App() {
 					<div className={style["education-list"]}>
 						{
 							education.map((education, index) => {
-								return <div key={`education-${index}`} className={style.education}>
+								return <div key={`education-${index}`} className={style["education-item"]}>
 									<div className={style["education-image"]}>
 										<img src={education.image} alt={education.alt}/>
 									</div>
 									<div className={style["education-info"]}>
-										<h3>{education.name}</h3>
+										<h3>{education.degree}, {education.name}</h3>
 										<p>{education.dates}</p>
 										<p>{education.location}</p>
-										<p>{education.degree}</p>
+										<div className={style["education-badges"]}>
+										{
+											education.badges.map((badge, index) => {
+												return <img src={badge} alt="Software badge" key={index}/>
+											})
+										}
+										</div>
 									</div>
 								</div>
 							})

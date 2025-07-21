@@ -573,7 +573,7 @@
 }
 
 
-.projects>.container>p {
+.projects>.container>p, .education>.container>p {
     font-size: 18px;
     text-align: center;
     width: 100%;
@@ -584,29 +584,34 @@
     margin: 0 auto 90px;
 }
 
-.projects-list {
+.projects-list, .education-list {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.project {
+.project, .education-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
 }
 
-.project-image>img {
+.education-item {
+    grid-gap: 75px;
+    place-items: center;
+}
+
+.project-image>img, .education-image>img {
     width: 700px;
     height: 500px;
 }
 
-.project-info {
+.project-info{
     margin-top: 100px;
     margin-right: 50px
 }
 
-.project-info>h3 {
+.project-info>h3, .education-info>h3 {
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
@@ -615,7 +620,7 @@
     font-weight: 700;
 }
 
-.project-info>p {
+.project-info>p, .education-info>p {
     font-size: 16px;
     color: var(--paragraph-color);
     line-height: 1.7;
@@ -624,7 +629,7 @@
     margin-bottom: 30px;
 }
 
-.project-image {
+.project-image, .education-image {
     display: grid;
     place-items: center;
     height: 350px;
@@ -632,17 +637,17 @@
     margin: auto;
 }
 
-.project-image > img {
+.project-image > img, .education-image > img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
-.project-info {
+.project-info{
     margin-top: 50px;
 }
 
-.project-info>h3 {
+.project-info>h3, .education-info>h3 {
     margin: 0;
     padding: 0;
     margin-bottom: 5px;
@@ -651,7 +656,7 @@
     font-weight: 700;
 }
 
-.project-info>p {
+.project-info>p, .education-info>p {
     font-size: 16px;
     color: var(--paragraph-color);
     line-height: 1.7;
@@ -669,11 +674,11 @@
     padding-top: 7px
 }
 
-.project-badges {
+.project-badges, .education-badges {
     margin-top: 20px;
 }
 
-.project-badges img {
+.project-badges img, .education-badges img {
     margin-right: 10px;
     border-radius: 3px;
 }
@@ -682,128 +687,22 @@
 
 .education {
     min-height: 100vh;
-    background-color: #d8f2fd;
+    background-color: #fafafa;
     padding-top: 100px;
     padding-bottom: 100px
 }
 
-
-.education>.container>p {
-    font-size: 18px;
-    text-align: center;
-    width: 100%;
-    line-height: 1.6;
-    color: var(--paragraph-color);
-    margin: 0;
-    max-width: 700px;
-    margin: 0 auto 90px;
-}
-
-.education-list {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.education {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-}
-
-.education-image>img {
-    width: 700px;
-    height: 500px;
-}
-
-.education-info {
-    margin-top: 100px;
-    margin-right: 50px
-}
-
-.education-info>h3 {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-    font-size: 25px;
-    color: var(--title-color);
-    font-weight: 700;
-}
-
-.education-info>p {
-    font-size: 16px;
-    color: var(--paragraph-color);
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.education-image {
-    display: grid;
-    place-items: center;
-    height: 350px;
-    width: 350px;
-    margin: auto;
-}
-
-.education-image > img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.education-info {
-    margin-top: 50px;
-}
-
-.education-info>h3 {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 5px;
-    font-size: 20px;
-    color: var(--title-color);
-    font-weight: 700;
-}
-
-.education-info>p {
-    font-size: 16px;
-    color: var(--paragraph-color);
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
-}
-
-.education-tasks {
-    margin-top:10px;
-    margin-left: 15px;
-    list-style-type: circle;
-}
-
-.education-tasks li {
-    padding-top: 7px
-}
-
-.education-badges {
-    margin-top: 20px;
-}
-
-.education-badges img {
-    margin-right: 10px;
-    border-radius: 3px;
-}
-
 @media (max-width: 1100px) {
-    .project {
+    .project, .education {
         grid-template-columns: 1fr;
     }
 
-    .project-image>img {
+    .project-image>img, .education-image>img {
         width: 400px;
         height: 300px;
     }
 
-    .project-info {
+    .project-info, .education-info {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -811,7 +710,7 @@
         margin-bottom: 150px;
     }
 
-    .project-info>p {
+    .project-info>p, .education-info>p {
         text-align: center;
         max-width: 350px;
     }
