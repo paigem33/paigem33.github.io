@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 // import components
 import DownloadButton from '../common/components/DownloadButton/DownloadButton';
@@ -170,19 +171,37 @@ function App() {
 
 	const [menu, setMenu] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const [verified, setVerified] = useState(false);
+	const [statusMessage, setStatusMessage] = useState(null);
+	const [statusType, setStatusType] = useState(null);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
+		if (!verified) {
+			setStatusMessage("Please complete the reCAPTCHA");
+			setStatusType("error");
+			return;
+		  }
 		setLoading(true);
+		setStatusMessage(null);
 
 		setTimeout(function () {
-			emailjs.sendForm('service_gjbmeus', 'template_qk6p0pa', form.current, 'HDMwz57k3xrihLg4J')
+			emailjs.sendForm('service_1ldxfad', 'template_lruwb8e', form.current, 'xABSEVtJoBAzm7FhX')
 				.then((result) => {
 					e.target.name.value = '';
 					e.target.email.value = '';
 					e.target.message.value = '';
+
+					setStatusMessage("Message sent successfully!");
+					setStatusType("success");
+				})
+				.catch(() => {
+					setStatusMessage("Failed to send message. Please try again.");
+					setStatusType("error");
+				})
+				.finally(() => {
+					setLoading(false);
 				});
-			setLoading(false);
 		}, 2000);
 
 	};
@@ -262,7 +281,7 @@ function App() {
 							<h3 className={style.title}>About Me</h3>
 							<p>
 								I have been working and studying in the tech world for about 7 years, and I have loved every second of it, both the satisfying and the frustrating ones! I enjoy having the opportunity to learn new skills and solve new problems everyday, one line of code at a time. <br /> <br />
-								In 2019, I graduated from a coding bootcamp in San Diego, California and got my first full time job as a developer shortly there after. I was there for about two years, and during that time I realized this was what I loved and wanted to do forever. That led me to enroll at Utah State University and graduate with a Computer Science degree in 2024. During that time I had the opportunity to start working at another amazing company, which meant I was able to grow my skill set both in and out of the classroom. Upon graduation, my education and previous experience allowed me to start working in my current role at ASRC Federal.<br /> <br />
+								In 2019, I graduated from a coding bootcamp in San Diego, California and got my first full time job as a developer shortly thereafter. I was there for about two years, and during that time I realized this was what I loved and wanted to do forever. That led me to enroll at Utah State University and graduate with a Computer Science degree in 2024. During that time I had the opportunity to start working at another amazing company, which meant I was able to grow my skill set both in and out of the classroom. Upon graduation, my education and previous experience allowed me to start working in my current role at ASRC Federal.<br /> <br />
 								When I'm not behind a computer, you can normally find me either with my nose in a book, out on a hike, rewatching Star Trek TNG for the tenth time, or setting up camp for a weekend in the mountains.
 							</p>
 							<div className={style["my-skill"]}>
@@ -391,15 +410,30 @@ function App() {
 							label="Message"
 							type="text"
 						/>
-						<SubmitButton
-							icon={<RiSendPlaneFill size="20px" color='white' />}
-							width="200px"
-							height="60px"
-							color="white"
-							backgroundColor="var(--primary-main)"
-						>
-							Submit
-						</SubmitButton>
+
+						<div>
+							<ReCAPTCHA
+								sitekey="6Lfy7osrAAAAAKEQbDgrdk2DZukA-vfpJGdzsFLK"
+								onChange={() => setVerified(true)}
+							/>
+							<div>
+								<SubmitButton
+									width="200px"
+									height="60px"
+								>
+									Submit
+								</SubmitButton>
+								{statusMessage && (
+									<p style={{ 
+										marginTop: "10px", 
+										color: statusType === "success" ? "green" : "red"
+									}}>
+										{statusMessage}
+									</p>
+								)}
+							</div>
+						</div>
+						
 						{
 							loading &&
 							<div className={style.loader}>

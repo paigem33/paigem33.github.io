@@ -1,64 +1,39 @@
-.submit-button{
+.submit-button {
     position: relative;
-    cursor: pointer;
     overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
     border-radius: 5px;
-}
-
-.icon{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin-left: -35px;
-    margin-top: 2px;
-    transition: 1s;
-}
-
-.submit-button > input{
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding-left: 20px;
-    transition: 1s;
-    overflow: hidden;
 }
 
-.submit-button:hover > input{   
-    padding-left: 250px;
+.submit-button:hover::before {
+    transform: scaleX(1);
 }
 
-.icon > svg{
-    transition: 1s;
+.button-content {
+    position: relative;
+    z-index: 1;
 }
 
-.submit-button:hover > .icon > svg{   
-    transform: rotate(45deg);
-}
-
-.submit-button:hover > .icon{
-    margin: 0;
-    animation: icon 1.5s 1s linear infinite forwards;
-}
-
-@keyframes icon{
-    0%{
-        margin: 0;
-    }
-    25%{
-        margin-top: 5px;
-    }
-    50%{
-        margin: 0;
-    }
-    75%{
-        margin-top: -5px;
-    }
-    100%{
-        margin: 0;
-    }
+.submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+        82.3deg,
+        #cb90c0 10.8%,
+        #9c7094 94.3%
+    );
+    transition: all 0.475s;
 }
