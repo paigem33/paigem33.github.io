@@ -145,25 +145,15 @@
         display: none;
     }
 
-    .logo {
-        flex-direction: column;
-        border: 2px solid var(--primary-main);
-        border-radius: 50%;
-        width: 70px;
-        height: 70px;
-        gap: 0;
-        justify-content: space-evenly;
-    }
-
     .logo>svg {
         width: 30px;
         height: 30px;
     }
 
     .logo>h5 {
-        font-size: 8px;
+        font-size: 12px;
         text-align: center;
-        width: 40px;
+        width: 100px;
     }
 
     .menu {
@@ -194,6 +184,10 @@
 
     .menu>li:hover>a {
         color: var(--primary-light);
+    }
+
+    .contact-nav {
+        display:none !important;
     }
 
 }
@@ -629,11 +623,19 @@
         flex-direction: column;
         margin-top: -80px;
         margin-bottom: 25px;
+        margin-right: 0;
+    }
+
+    .project-info h3 {
+        text-align: center;
+    }
+
+    .project-badges {
+        text-align: center;
     }
 
     .project-info>p, .education-info>p {
         text-align: center;
-        max-width: 350px;
     }
 }
 
