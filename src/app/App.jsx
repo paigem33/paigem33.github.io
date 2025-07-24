@@ -71,8 +71,8 @@ const projects = [
 		image: Asrc,
 		dates: "July 2024 - Present",
 		tasks: [
-			"Maintained and developed RESTful API endpoints within a .NET framework",
-			"Validated API functionality through unit testing as the use of Swagger",
+			"Maintained and developed RESTful API endpoints within multiple .NET frameworks",
+			"Validated API functionality through unit testing as well as through the use of Swagger",
 			"Followed industry-standard deprecation practices for legacy endpoints",
 			"Collaborated closely with QA to identify, track, and resolve defects",
 			"Adapted to evolving requirements while working in an Agile environment"
