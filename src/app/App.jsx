@@ -9,7 +9,7 @@ import InputField from '../common/components/InputField/InputField';
 import TextAreaField from '../common/components/TextAreaField/TextAreaField';
 import SubmitButton from '../common/components/SubmitButton/SubmitButton';
 import Loader from '../common/components/Loader/Loader';
-import cv from '../assets/files/cv.pdf';
+import cv from '../assets/files/Paige MacGregor - Resume.pdf';
 
 // import icons
 import { FaReact } from "react-icons/fa";
@@ -247,7 +247,7 @@ function App() {
 					<p>A Full Stack Developer, skilled at building and maintaining frontends, backends, and databases for websites and applications that lead to the success of the overall product</p>
 					<a
 						href={cv}
-						download="cv-PDF-document"
+						download="Paige MacGregor Resume"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
