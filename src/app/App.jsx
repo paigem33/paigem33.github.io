@@ -12,14 +12,7 @@ import Loader from '../common/components/Loader/Loader';
 import cv from '../assets/files/Paige MacGregor - Resume.pdf';
 
 // import icons
-import { FaReact } from "react-icons/fa";
-import { AiFillGithub, AiFillLinkedin, AiFillHtml5, AiOutlineEye } from "react-icons/ai";
-import { BiLogoGmail, BiLogoCss3, BiLogoJavascript, BiLogoRedux, BiLogoJava } from "react-icons/bi";
-import { BsFacebook, BsGit, BsPuzzle } from "react-icons/bs";
-import { TbBrandCpp } from "react-icons/tb";
-import { FaMobileAlt } from "react-icons/fa";
-import { RiSendPlaneFill } from "react-icons/ri";
-import { SiTypescript, SiRecoil, SiReactquery } from "react-icons/si";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 //import images
 import Asrc from '../assets/images/asrc.webp';
@@ -27,6 +20,7 @@ import Agentelite from '../assets/images/agentelite.webp';
 import Maidenvoyage from '../assets/images/maidenvoyage.svg';
 import Learn from '../assets/images/learn.svg';
 import Usu from '../assets/images/usu.png';
+import ai from '../assets/images/aws-certified-ai-practitioner.png'
 
 // import style
 import style from './App.module.css';
@@ -164,6 +158,14 @@ const education = [
 			"https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"
 		  ]
 	},
+];
+
+const certs = [
+	{
+		name: "AWS Certified Ai Practitioner",
+		image: ai,
+		link: "https://www.credly.com/badges/8e8e64e3-476d-4f07-8937-e48bba9380aa/public_url"
+	}
 ];
 
 function App() {
@@ -364,6 +366,24 @@ function App() {
 											})
 										}
 										</div>
+									</div>
+								</div>
+							})
+						}
+
+					</div>
+				</div>
+
+				<div className={`${style.container} ${style.certs}`}>
+					<h2 className={style["title"]}>Certifications</h2>
+					<div className={style["education-list"]}>
+						{
+							certs.map((cert, index) => {
+								return <div key={`education-${index}`} className={style["cert-item"]}>
+									<div className={style["cert-image"]}>
+										<a href={cert.link} target="_blank">
+											<img src={cert.image} alt={cert.name}/>
+										</a>
 									</div>
 								</div>
 							})

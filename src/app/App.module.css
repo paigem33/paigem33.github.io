@@ -650,6 +650,12 @@
     .education-image :nth-of-type(1) {
         margin-top:50px
     }
+    .certs {
+        margin-top: 50px
+    }
+    .certs h2 {
+        font-size: 34px;
+    }
 }
 
 /* ************************************** Contact ************************************** */
